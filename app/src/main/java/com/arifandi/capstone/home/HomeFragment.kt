@@ -2,7 +2,6 @@ package com.arifandi.capstone.home
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,7 +39,7 @@ class HomeFragment : Fragment() {
         if (activity != null) {
 
             val newsAdapter = NewsAdapter()
-            newsAdapter.setOnItemClickCallback(object : NewsAdapter.onItemClick{
+            newsAdapter.setOnItemClickCallback(object : NewsAdapter.OnItemClick{
                 override fun onItemClicked(character: News) {
                     val intentToDetail = Intent(activity, DetailNewsActivity::class.java)
                     intentToDetail.putExtra(DetailNewsActivity.EXTRA_DATA, character)

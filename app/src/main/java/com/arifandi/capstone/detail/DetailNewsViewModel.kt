@@ -1,6 +1,5 @@
 package com.arifandi.capstone.detail
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.LiveDataReactiveStreams
 import androidx.lifecycle.ViewModel
 import com.arifandi.capstone.core.domain.model.News

@@ -1,7 +1,6 @@
 package com.arifandi.capstone.core.data
 
 import android.annotation.SuppressLint
-import android.util.Log
 import com.arifandi.capstone.core.data.source.remote.network.ApiResponse
 import io.reactivex.BackpressureStrategy
 import io.reactivex.Flowable
@@ -9,16 +8,8 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import io.reactivex.subjects.PublishSubject
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.emitAll
-import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.observeOn
-import kotlinx.coroutines.flow.subscribe
-import kotlinx.coroutines.flow.subscribeOn
-import kotlinx.coroutines.flow.take
 
+@SuppressLint("CheckResult")
 abstract class NetworkBoundResource<ResultType, RequestType> {
 
     private val result = PublishSubject.create<Resource<ResultType>>()

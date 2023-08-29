@@ -1,7 +1,6 @@
 package com.arifandi.capstone.core.domain.repository
 
 import com.arifandi.capstone.core.data.Resource
-import com.arifandi.capstone.core.data.source.local.entity.NewsEntity
 import com.arifandi.capstone.core.domain.model.News
 import io.reactivex.Flowable
 

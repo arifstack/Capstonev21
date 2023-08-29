@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:paddingStart="16dp"
     android:paddingEnd="16dp"
@@ -14,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:scaleType="fitXY"
+        android:contentDescription="@string/imagew_news"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,7 +22,7 @@
         android:id="@+id/lbl_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Beritaharian"
+        android:text="@string/txt_default_label"
         android:lines="2"
         android:textColor="@color/black"
         android:textSize="14dp"

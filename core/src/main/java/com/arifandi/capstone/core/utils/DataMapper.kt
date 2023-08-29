@@ -1,6 +1,5 @@
 package com.arifandi.capstone.core.utils
 
-import android.util.Log
 import com.arifandi.capstone.core.data.source.local.entity.NewsEntity
 import com.arifandi.capstone.core.data.source.remote.response.NewsResponse
 import com.arifandi.capstone.core.domain.model.News

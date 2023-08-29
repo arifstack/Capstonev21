@@ -1,20 +1,14 @@
 package com.arifandi.capstone.core.data.source.remote
 
 import android.annotation.SuppressLint
-import android.util.Log
 import com.arifandi.capstone.core.data.source.remote.network.ApiResponse
 import com.arifandi.capstone.core.data.source.remote.network.ApiService
 import com.arifandi.capstone.core.data.source.remote.response.NewsResponse
-import com.arifandi.capstone.core.domain.model.News
 import io.reactivex.BackpressureStrategy
 import io.reactivex.Flowable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import io.reactivex.subjects.PublishSubject
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.flow.flowOn
 import javax.inject.Inject
 import javax.inject.Singleton
 

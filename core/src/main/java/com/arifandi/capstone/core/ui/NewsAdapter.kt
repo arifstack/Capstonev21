@@ -11,7 +11,7 @@ import java.util.ArrayList
 
 class NewsAdapter : RecyclerView.Adapter<NewsAdapter.CharacterViewHolder>() {
 
-    private var onItemClickCallBack: onItemClick? = null
+    private var onItemClickCallBack: OnItemClick? = null
 
     private var characterListData = ArrayList<News>()
     fun setData(newCharacterListData: List<News>?) {
@@ -47,11 +47,11 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.CharacterViewHolder>() {
 
     override fun getItemCount(): Int = characterListData.size
 
-    fun setOnItemClickCallback(onItemClickCallback: onItemClick) {
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClick) {
         this.onItemClickCallBack = onItemClickCallback
     }
 
-    interface onItemClick {
+    interface OnItemClick {
         fun onItemClicked(character: News)
     }
 }

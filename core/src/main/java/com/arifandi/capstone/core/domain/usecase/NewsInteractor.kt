@@ -1,6 +1,5 @@
 package com.arifandi.capstone.core.domain.usecase
 
-import com.arifandi.capstone.core.data.source.local.entity.NewsEntity
 import com.arifandi.capstone.core.domain.model.News
 import com.arifandi.capstone.core.domain.repository.InewsRepository
 import io.reactivex.Flowable

@@ -4,12 +4,9 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import androidx.room.Update
 import com.arifandi.capstone.core.data.source.local.entity.NewsEntity
-import com.arifandi.capstone.core.domain.model.News
 import io.reactivex.Completable
 import io.reactivex.Flowable
-import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface NewsDao {

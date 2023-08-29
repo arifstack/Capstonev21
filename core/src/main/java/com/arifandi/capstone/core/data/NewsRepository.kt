@@ -1,7 +1,6 @@
 package com.arifandi.capstone.core.data
 
 import com.arifandi.capstone.core.data.source.local.LocalDataSource
-import com.arifandi.capstone.core.data.source.local.entity.NewsEntity
 import com.arifandi.capstone.core.data.source.remote.RemoteDataSource
 import com.arifandi.capstone.core.data.source.remote.network.ApiResponse
 import com.arifandi.capstone.core.data.source.remote.response.NewsResponse

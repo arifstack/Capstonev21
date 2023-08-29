@@ -42,7 +42,7 @@ class FavoriteActivity : AppCompatActivity() {
         supportActionBar?.title = "Favorite News"
 
         val newsAdapter = NewsAdapter()
-        newsAdapter.setOnItemClickCallback(object : NewsAdapter.onItemClick{
+        newsAdapter.setOnItemClickCallback(object : NewsAdapter.OnItemClick{
             override fun onItemClicked(character: News) {
                 val intentToDetail = Intent(this@FavoriteActivity, DetailNewsActivity::class.java)
                 intentToDetail.putExtra(DetailNewsActivity.EXTRA_DATA, character)

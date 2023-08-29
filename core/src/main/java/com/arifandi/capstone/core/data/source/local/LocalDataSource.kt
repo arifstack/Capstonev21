@@ -2,9 +2,7 @@ package com.arifandi.capstone.core.data.source.local
 
 import com.arifandi.capstone.core.data.source.local.entity.NewsEntity
 import com.arifandi.capstone.core.data.source.local.room.NewsDao
-import com.arifandi.capstone.core.domain.model.News
 import io.reactivex.Flowable
-import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 import javax.inject.Singleton
 
