@@ -6,7 +6,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 
-@Entity(tableName = "newsapp")
+@Entity(tableName = "Capstone")
 data class NewsEntity(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "newsId")
@@ -22,13 +22,13 @@ data class NewsEntity(
     var description: String?,
 
     @ColumnInfo(name = "publishedAt")
-    var publishedAt: String,
+    var publishedAt: String?,
 
     @ColumnInfo(name = "title")
-    var title: String,
+    var title: String?,
 
     @ColumnInfo(name = "url")
-    var url: String,
+    var url: String?,
 
     @ColumnInfo(name = "urlToImage")
     var urlToImage: String?,

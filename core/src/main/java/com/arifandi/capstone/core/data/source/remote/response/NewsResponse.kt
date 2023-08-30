@@ -10,11 +10,11 @@ data class NewsResponse(
     @field:SerializedName("description")
     val description: String?,
     @field:SerializedName("publishedAt")
-    val publishedAt: String,
+    val publishedAt: String?,
     @field:SerializedName("title")
-    val title: String,
+    val title: String?,
     @field:SerializedName("url")
-    val url: String,
+    val url: String?,
     @field:SerializedName("urlToImage")
     val urlToImage: String?
 )

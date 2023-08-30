@@ -14,18 +14,18 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface NewsDao {
 
-    @Query("SELECT * FROM newsapp")
+    @Query("SELECT * FROM capstone")
     fun getAllNews(): Flowable<List<NewsEntity>>
 
-    @Query("SELECT * FROM newsapp WHERE newsId = :newsId")
+    @Query("SELECT * FROM capstone WHERE newsId = :newsId")
     fun getNewsDetail(newsId: String): Flowable<NewsEntity>
 
-    @Query("SELECT * FROM newsapp where isFavorite = 1")
+    @Query("SELECT * FROM capstone where isFavorite = 1")
     fun getFavoriteNews(): Flowable<List<NewsEntity>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertNews(tourism: List<NewsEntity>): Completable
 
-    @Query("UPDATE newsapp SET isFavorite = :newState WHERE newsId = :newsId")
+    @Query("UPDATE capstone SET isFavorite = :newState WHERE newsId = :newsId")
     fun updateFavoriteNews(newsId: String, newState: Boolean)
 }
