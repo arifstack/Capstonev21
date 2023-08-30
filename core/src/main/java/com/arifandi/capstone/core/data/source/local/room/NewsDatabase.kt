@@ -5,8 +5,10 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.arifandi.capstone.core.data.source.local.entity.NewsEntity
+import net.sqlcipher.database.SQLiteDatabase
+import net.sqlcipher.database.SupportFactory
 
-@Database(entities = [NewsEntity::class], version = 2, exportSchema = false)
+@Database(entities = [NewsEntity::class], version = 4, exportSchema = false)
 abstract class NewsDatabase : RoomDatabase() {
 
     abstract fun newsDao(): NewsDao
@@ -15,17 +17,22 @@ abstract class NewsDatabase : RoomDatabase() {
         @Volatile
         private var INSTANCE: NewsDatabase? = null
 
-        fun getInstance(context: Context): NewsDatabase =
-            INSTANCE ?: synchronized(this) {
+        fun getInstance(context: Context): NewsDatabase {
+            return INSTANCE ?: synchronized(this) {
+                val passphrase: ByteArray = SQLiteDatabase.getBytes("Capstone".toCharArray())
+                val factory = SupportFactory(passphrase)
+
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     NewsDatabase::class.java,
-                    "NewsApp.db"
+                    "Capstone.db"
                 )
-                    .fallbackToDestructiveMigration()
+                    .openHelperFactory(factory)
                     .build()
+
                 INSTANCE = instance
                 instance
             }
+        }
     }
 }

@@ -10,9 +10,9 @@ data class News(
     var author: String?,
     var content: String?,
     var description: String?,
-    var publishedAt: String,
-    var title: String,
-    var url: String,
+    var publishedAt: String?,
+    var title: String?,
+    var url: String?,
     var urlToImage: String?,
     val isFavorite: Boolean
 ):Parcelable
