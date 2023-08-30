@@ -16,11 +16,12 @@ abstract class NewsDatabase : RoomDatabase() {
     companion object {
         @Volatile
         private var INSTANCE: NewsDatabase? = null
-        val passphrase: ByteArray = SQLiteDatabase.getBytes("Capstone".toCharArray())
-        val factory = SupportFactory(passphrase)
 
-        fun getInstance(context: Context): NewsDatabase =
-            INSTANCE ?: synchronized(this) {
+        fun getInstance(context: Context): NewsDatabase {
+            return INSTANCE ?: synchronized(this) {
+                val passphrase: ByteArray = SQLiteDatabase.getBytes("Capstone".toCharArray())
+                val factory = SupportFactory(passphrase)
+
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     NewsDatabase::class.java,
@@ -28,9 +29,10 @@ abstract class NewsDatabase : RoomDatabase() {
                 )
                     .openHelperFactory(factory)
                     .build()
+
                 INSTANCE = instance
                 instance
             }
-
+        }
     }
 }
