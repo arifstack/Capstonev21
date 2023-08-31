@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.arifandi.capstone.core.R
 import com.arifandi.capstone.core.databinding.ItemListNewsBinding
 import com.arifandi.capstone.core.domain.model.News
 import com.bumptech.glide.Glide
@@ -36,6 +37,8 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.CharacterViewHolder>() {
             binding.apply {
                 Glide.with(itemView.context)
                     .load(data.urlToImage)
+                    .placeholder(R.mipmap.ic_empty_news)
+                    .error(R.mipmap.ic_empty_news)
                     .into(imgNews)
                 lblTitle.text = data.title
                 itemView.setOnClickListener {

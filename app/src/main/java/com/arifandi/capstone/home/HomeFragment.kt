@@ -53,7 +53,11 @@ class HomeFragment : Fragment() {
                         is Resource.Loading -> binding.progressBar.visibility = View.VISIBLE
                         is Resource.Success -> {
                             binding.progressBar.visibility = View.GONE
-                            newsAdapter.setData(news.articles)
+                            val newsList = news.articles
+                            if (newsList!=null){
+                                newsAdapter.setData(news.articles)
+                            }
+
                         }
 
                         is Resource.Error -> {
