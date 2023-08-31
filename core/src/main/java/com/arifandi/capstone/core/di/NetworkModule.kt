@@ -1,6 +1,5 @@
 package com.arifandi.capstone.core.di
 
-import com.arifandi.capstone.core.data.source.remote.network.ApiConfig
 import com.arifandi.capstone.core.data.source.remote.network.ApiService
 import dagger.Module
 import dagger.Provides
